@@ -2,9 +2,11 @@
   "name": "chai-or-backend",
   "version": "1.0.0",
   "description": "a backend in at chai or code channel",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "javascript",
@@ -12,5 +14,9 @@
     "chai"
   ],
   "author": "Adarsh Tiwari",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  }
 }
