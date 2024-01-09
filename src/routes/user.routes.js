@@ -30,7 +30,7 @@ router.route("/changepassword").post(verifyJWT,changeCurrentPassword)
 
 router.route("/getcurrentuser").post(verifyJWT,getCurrentuser)
 
-router.route("/updateaccountdetails").post(updateAccountDetails)
+router.route("/updateaccountdetails").post(verifyJWT,updateAccountDetails)
 
 
 router.route("/updateAvatar").post(updateUserAvatar)
