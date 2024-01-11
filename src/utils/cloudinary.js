@@ -27,6 +27,19 @@ cloudinary.config({
     }
  }
 
+ const deleteFromCloudinary = async (url)=>{
+    try {
+        if(!url)return null
+
+        const deleteResponse = await cloudinary.uploader.destroy(url,{
+            resource_type: "auto"
+        })
+        return deleteResponse;
+    } catch (error) {
+        return null
+    }
+ }
 
 
-export  {uploadOnCloudinary};
+
+export  {uploadOnCloudinary, deleteFromCloudinary};
