@@ -76,10 +76,17 @@ const getVideoById = asyncHandler(async (req, res) => {
         throw new ApiError(400,"not get any video")
     }
 
-    const video = await Video.aggregate([
+    
+    console.log(videoId);
+    // console.log(videos);
+
+    // const id = `${videoId}`
+    // console.log(id);
+
+    const myvideo = await Video.aggregate([
         {
             $match:{
-                _id: new mongoose.Types.ObjectId(videoId)
+                _id : new mongoose.Types.ObjectId(videoId)
             }
         },
         {
@@ -163,7 +170,7 @@ const getVideoById = asyncHandler(async (req, res) => {
         }
     ])
     return res.status(200)
-    .json(new ApiResponse(200, video, "Get video successfully"))
+    .json(new ApiResponse(200, myvideo, "Get video successfully"))
 })
 
 const updateVideo = asyncHandler(async (req, res) => {

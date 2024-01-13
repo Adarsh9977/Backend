@@ -11,6 +11,7 @@ const toggleVideoLike = asyncHandler(async (req, res) => {
     if(!videoId){
         throw new ApiError(400, "videoID is required ")
     }
+    // console.log(videoId);
 
     const isLiked =  await Like.findOne({
         $and:[
