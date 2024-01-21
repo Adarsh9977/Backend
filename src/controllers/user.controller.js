@@ -53,7 +53,7 @@ const registerUser = asyncHandler(async (req, res) => {
   // console.log(req.files);
 
   const avatarLocalPath = req.files?.avatar[0]?.path;
-  // const coverImageLocalPath = req.files?.coverimage[0]?.path;
+  // const coverImageLocalPath = req.files?.coverimage[0]?.path;lates
 
   let coverImageLocalPath;
   if (
